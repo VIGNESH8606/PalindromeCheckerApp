@@ -1,22 +1,25 @@
-//Version 2
+//Version 4
 //Author Vignesh Ragav
-//Use Case 3: Reverse Method
+//Use Case 4: Character Array Based Method
 public class PalindromeCheckerApp
 {
     public static void main(String[] args)
     {
-        String input = "madam";
-        String reversed = "";
-        boolean isPalindrome = false;
-        for(int i=input.length()-1; i>=0;i--)
+        String input = "radar";
+        char[] chars = input.toCharArray();
+        int start =0;
+        int end = input.length()-1;
+        boolean isPalindrome = true;
+        while(start<end)
         {
-            reversed=reversed+input.charAt(i);
+            if(chars[start]!=chars[end])
+            {
+                isPalindrome =false;
+            }
+            start++;
+            end--;
         }
-        System.out.println("Input Text: "+input);
-        if(reversed.equals(input))
-        {
-            isPalindrome = true;
-        }
+        System.out.println("Input :"+input);
         System.out.println("Is it a palindrome? "+isPalindrome);
     }
 }
