@@ -1,20 +1,22 @@
 //Version 2
 //Author Vignesh Ragav
-//Use Case 2: Hardcoded
+//Use Case 3: Reverse Method
 public class PalindromeCheckerApp
 {
     public static void main(String[] args)
     {
         String input = "madam";
+        String reversed = "";
         boolean isPalindrome = false;
-        for(int i=0; i<input.length()/2;i++)
+        for(int i=input.length()-1; i>=0;i--)
         {
-            if(input.charAt(i)==input.charAt(input.length()-1))
-            {
-                isPalindrome = true;
-            }
+            reversed=reversed+input.charAt(i);
         }
         System.out.println("Input Text: "+input);
+        if(reversed.equals(input))
+        {
+            isPalindrome = true;
+        }
         System.out.println("Is it a palindrome? "+isPalindrome);
     }
 }
