@@ -1,9 +1,9 @@
 # PalindromeCheckerApp
-//Create a stack of character datatype
-//Create a queue of character datatype
+//Create a deque of character datatype
 //Create string input
 //Create a boolean isPalindrome and intialize to true
-//push the character elements of input into stack and queue
-//If condition: The character c is not the same as popped element from stack and character removed from queue
+//push the character elements of input into deque via "addlast"
+//while the size of the deque remains greater than 1
+//If condition: The character c removed First and Last is not the same
 //Redeclare the isPalindrome as false
 //Print result
