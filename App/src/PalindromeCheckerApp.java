@@ -5,31 +5,31 @@ import java.util.*;
 //Use Case 8: Linked list Based Method
 public class PalindromeCheckerApp
 {
-    public static void main(String[] args)
+    public static boolean Check(String input, int start, int end)
     {
-        String input = "refer";
-        LinkedList<Character> linkedList = new LinkedList<>();
-        for(char c : input.toCharArray()) {
-            linkedList.add(c);
-        }
-        boolean isPalindrome = true;
-        while (linkedList.size()>1)
+        if(start>=end)
         {
-            if(linkedList.removeFirst()!=linkedList.removeLast())
+            return true;
+        }
+        else {
+            if(input.charAt(start)!=input.charAt(end))
             {
-                isPalindrome=false;
-                break;
+                return false;
             }
         }
-        if(isPalindrome)
+        return Check(input,start+1,end-1);
+    }
+    public static void main(String[] args)
+    {
+        String input = "madam";
+        boolean result = Check(input,0,input.length()-1);
+        System.out.println("Input : "+input);
+        if(result==true)
         {
-            System.out.println("Input :"+input);
-            System.out.println("Is it a palindrome? "+isPalindrome);
+            System.out.println("Is Palindrome : "+result);
         }
-        else{
-            System.out.println("Input :"+input);
-            System.out.println("Is it a palindrome? "+isPalindrome);
+        else {
+            System.out.println("Is Palindrome : "+result);
         }
-
     }
 }
