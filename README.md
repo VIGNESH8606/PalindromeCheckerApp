@@ -1,9 +1,9 @@
 # PalindromeCheckerApp
 //Create a LinkedList of character datatype
 //Create string input
-//Create a boolean isPalindrome and intialize to true
-//push the character elements of input into LinkedList via "add"
-//while the size of the LinkedList remains greater than 1
-//If condition: The character c removed First and Last is not the same
+//Pass the input, starting index 0 and ending index as length of input-1
+//if element index start is >= end 
+//then middle of input has crossed so the input is not palindrome
 //Redeclare the isPalindrome as false
+//if start index character is same as end index character then return true
 //Print result
