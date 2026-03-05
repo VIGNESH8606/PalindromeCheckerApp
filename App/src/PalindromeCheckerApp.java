@@ -1,25 +1,34 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
-//Version 5
+//Version 6
 //Author Vignesh Ragav
-//Use Case 5: Stack Based Method
+//Use Case 6: Queue and Stack Based Method
 public class PalindromeCheckerApp
 {
     public static void main(String[] args)
     {
-        String input = "noon";
+        String input = "civic";
+        Queue<Character> queue = new LinkedList<>();
         Stack<Character> stack = new Stack<>();
-        boolean isPalindrome = true;
-        for(char c : input.toCharArray())
-        {
+        for(char c : input.toCharArray()) {
             stack.push(c);
+            queue.add(c);
         }
-        for(char c : input.toCharArray())
+        boolean isPalindrome = true;
+        while (!queue.isEmpty())
         {
-            if(c!=stack.pop())
+            if(queue.remove()!=stack.pop())
             {
-                isPalindrome = false;
+                isPalindrome=false;
+                break;
             }
+        }
+        if(isPalindrome)
+        {
+            System.out.println("Input :"+input);
+            System.out.println("Is it a palindrome? "+isPalindrome);
         }
         System.out.println("Input :"+input);
         System.out.println("Is it a palindrome? "+isPalindrome);
