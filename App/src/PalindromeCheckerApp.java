@@ -1,35 +1,33 @@
 import java.util.*;
 
-//Version 8
+//Version 11
 //Author Vignesh Ragav
-//Use Case 8: Linked list Based Method
-public class PalindromeCheckerApp
+//Use Case 11: OODP Based Method
+class PalindromeService
 {
-    public static boolean Check(String input, int start, int end)
+    public boolean palindrome(String input)
     {
-        if(start>=end)
-        {
-            return true;
-        }
-        else {
+        int start=0;
+        int end = input.length()-1;
+        while (start<end){
             if(input.charAt(start)!=input.charAt(end))
             {
                 return false;
             }
+            start++;
+            end--;
         }
-        return Check(input,start+1,end-1);
+        return true;
     }
+}
+public class PalindromeCheckerApp
+{
     public static void main(String[] args)
     {
-        String input = "madam";
-        boolean result = Check(input,0,input.length()-1);
+        PalindromeService service = new PalindromeService();
+        String input = "racecar";
+        boolean result = service.palindrome(input);
         System.out.println("Input : "+input);
-        if(result==true)
-        {
-            System.out.println("Is Palindrome : "+result);
-        }
-        else {
-            System.out.println("Is Palindrome : "+result);
-        }
+        System.out.println("Is Palindrome : "+result);
     }
 }
