@@ -1,9 +1,7 @@
 # PalindromeCheckerApp
-//Create a LinkedList of character datatype
-//Create string input
-//Pass the input, starting index 0 and ending index as length of input-1
-//if element index start is >= end 
-//then middle of input has crossed so the input is not palindrome
-//Redeclare the isPalindrome as false
-//if start index character is same as end index character then return true
+//Create a text sentence
+//create a normalized version where every non alpha numeric counterpart is replaced with "" and convert to lowerCase
+//Traverse until mid of sentence
+//if charAt(i)==length-1-i
+//return the boolean value as true
 //Print result
